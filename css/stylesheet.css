@@ -1,0 +1,197 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#navbar {
+  background-color:#9a4e30 ;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#pageHeading {
+  font-family: "Dancing Script", serif;
+  font-size: 2rem;
+  color: white;
+  padding: 10px 10px 15px 15px;
+}
+
+#mobileNavMenuButton {
+  color: white;
+  margin-right: 15px;
+}
+
+#mobileMenuDrawer {
+  margin-top: 63px;
+  display: none;
+  background-color: #70867f;
+  z-index: 99;
+  position: absolute;
+  right: 0;
+}
+
+#desktopNav {
+  display: none;
+  flex-grow: 1;
+  padding-left: 200px;
+}
+
+#barItems {
+  display: flex;
+  justify-content: space-between;
+  max-width: 400px;
+  list-style-type: none;
+}
+
+#barItems a {
+  text-decoration: none;
+  color: white;
+  font-family: "Open Sans";
+  font-size: 32px;
+  margin-right: 30px;
+  display: inline;
+}
+
+#barItems li {
+  display: inline;
+}
+
+
+#menuItems {
+  list-style-type: none;
+}
+
+#menuItems a {
+  text-decoration: none;
+  color: white;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-image: linear-gradient(#ddebd4,#6b7050);
+  background-size: 100% 100%;
+  padding: 10px;
+  flex-grow: 1;
+}
+
+#homecontent {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-image: linear-gradient(#ddebd4b9,#6b7050c4), url(../images/restaurant.jpg);
+  background-size: 100% 100%;
+  padding: 10px;
+  flex-grow: 1;
+  text-align: center;
+}
+
+#homecontent p {
+  margin-top: 15px;
+}
+
+.staffContainer {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+
+.staffProfile {
+  width: 400px;
+  margin: 10px;
+  border: 3px solid #333
+}
+
+table {
+  width: 100%;
+  border-spacing: 30px;
+}
+
+form, input, textarea {
+  width: 100%;
+}
+
+input, textarea {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#footer {
+  background-color: #dea17c ;
+  width: 100%;
+  margin-top: auto;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 150px;
+  flex-direction: row;
+  font-size: 32px;
+}
+
+.socialIcons i {
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+.dancingFont {
+  font-family: "Dancing Script";
+}
+
+.opensansFont {
+  font-family: "Open Sans";
+}
+
+.menuLinks {
+  font-family: "Open Sans";
+  text-align: justify;
+  color: white;
+  list-style-type: none;
+  padding: 14px 25px;
+}
+
+/* Rules that apply ONLY to desktops*/
+@media only screen and (min-width : 1024px) {
+  #desktopNav {
+    display: block;
+  }
+  #mobileNavMenuButton {
+    display: none; /* Hide navigation menu button on desktop */
+  }
+  #content { /*Desktop Padding */
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+  #imgLinks {
+    flex-direction: row;
+  }
+  .socialIcons i {
+    padding-bottom: 0px;
+  }
+  .staffContainer {
+    justify-content: center;
+    flex-direction: row;
+  }
+}
